@@ -13,7 +13,7 @@ $highlight-color: #F0F0F0;
 body {
     background-color: $background-color;
     color: $text-color;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   
   /* Tailwind Utility Classes with Custom Styles */
@@ -52,4 +52,13 @@ body {
   
   h2 {
     @apply text-xl font-semibold;
+  }
+
+  .mutedGrey {
+    color: #868e96;
+    font-style: normal;
+    font-weight: 200;
+  }
+  .mutedBlue {
+    @apply text-blue-500;
   }
