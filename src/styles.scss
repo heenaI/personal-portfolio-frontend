@@ -12,13 +12,18 @@ body {
   
   /* Tailwind Utility Classes with Custom Styles */
 
+@layer components {
+  .underline-animate {
+    @apply relative inline-block;
 
-  .mutedGrey {
-    color: #868e96;
-    font-style: normal;
-    font-weight: 200;
-  }
+    &::after {
+      content: '';
+      @apply absolute left-0 -bottom-1 h-0.5 w-0 bg-textLight transition-all duration-300;
+      transition-property: width;
+    }
 
-  .logo{
-    height: 100px;
+    &:hover::after {
+      @apply w-full;
+    }
   }
+}
